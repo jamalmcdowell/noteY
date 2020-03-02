@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  </head>
+  <body>
+    <nav>
+    </nav>
+    <div class="container">
+
+      <h1>Welcome To Notey!</h1>
+        <% for (let notes of note ) { %>
+          <div class="note">
+            <a href="/notey/<%=note._id%>">
+              <%= note.title %>
+              <% if (note.image !== "") { %>
+                <%= note.image %>
+              <% } %>
+          </div>
+       <% } %>
+    </div>
+  </body>
+</html>
