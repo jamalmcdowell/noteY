@@ -1,0 +1,16 @@
+body {
+  margin: 0
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  background-color: red;
+  padding: 1em;
+}
+
+.navBar {
+  border-right: 1px solid black;
+  border-bottom: 3px solid black;
+  text-decoration: none;
+  font-size: 1.3em;
+}

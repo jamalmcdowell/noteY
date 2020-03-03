@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <%- include ('../partials/nav.ejs') %>
+</head>
+  <body>
+    <nav>
+    </nav>
+    <div class="container">
+      <h1>notey New Page</h1>
+      <form action="/notey" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="title" placeholder="Enter A Title" />
+        <label for="name">Image:</label>
+        <input type="text" name="image" placeholder="Paste In A Image Link" />
+
+        <textarea name="body" rows="8" cols="80" placeholder="Description"></textarea>
+        <br/>
+        <input type="submit" value="Submit">
+      <form>
+      <button type="button" name="button">
+        <a href="/notey">Back</a>
+      </button>
+    </div>
+  </body>
+</html>

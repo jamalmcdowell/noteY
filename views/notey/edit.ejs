@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <%- include ('../partials/head.ejs') %>
-  </head>
+<head>
+  <%- include ('../partials/nav.ejs') %>
+</head>
   <body>
-    <nav>
-      <%- include ('../partials/nav.ejs') %>
-    </nav>
     <div class="container">
       <h1>notey New Page</h1>
       <form action="/notey/<%=note.id%>?_method=PUT" method="POST">
         <label for="name">Name:</label>
-        <input type="text" name="name" value="<%=note.title%>" />
-        <label for="description">Description:</label>
-        <input type="text" name="description" value="<%=note.description%>" />
+        <input type="text" name="title" value="<%=note.title%>" />
+        <textarea name="Description" rows="8" cols="80">Description</textarea>
         <br/>
         <input type="submit" value="Submit">
       <form>

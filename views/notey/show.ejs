@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <%- include ('../partials/nav.ejs') %>
+</head>
+  <body>
+    <div class="container">
+      <h1>notey Show Page</h1>
+      <div class="showHolder">
+        <div class="Title">
+          <h3><%= note.title %> </h3>
+        </div>
+        <div class="description">
+          <p><%= note.description %> </p>
+        </div>
+        <div class="image">
+          <img src="<%= note.image %>" alt="">
+        </div>
+
+      </div>
+      <br>
+      <a href="/notey/<%=note._id%>/edit"><button type="button" name="button">Edit</button></a>
+      <br>
+      <br>
+      <form action="/notey/<%=note._id%>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE"/>
+      </form>
+      <br>
+      <a href="/notey">
+      <button type="button" name="button">
+        Back
+      </button>
+      </a>
+    </div>
+  </body>
+</html>

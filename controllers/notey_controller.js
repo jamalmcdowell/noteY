@@ -44,8 +44,10 @@ notey.post('/', (req, res) => {
 
 notey.get('/', (req, res) => {
   Note.find({}, (err, allNotes) => {
+    console.log(allNotes);
     res.render('notey/index.ejs', {
       note: allNotes
+
     })
   })
 })

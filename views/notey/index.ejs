@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <%- include ('../partials/nav.ejs') %>
+        <link rel="stylesheet" href="css/index/style.css">
   </head>
   <body>
-    <nav>
-    </nav>
-    <div class="container">
 
+    <div class="container">
       <h1>Welcome To Notey!</h1>
-        <% for (let notes of note ) { %>
+        <% for (let noteIteration of note ) { %>
           <div class="note">
-            <a href="/notey/<%=note._id%>">
-              <%= note.title %>
-              <% if (note.image !== "") { %>
-                <%= note.image %>
+            <a href="/notey/<%=noteIteration._id%>" class="noteLink">
+              <%= noteIteration.title %>
+            </a>
+              <% if (noteIteration.image !== "") { %>
+                <img src="<%= noteIteration.image %>" alt="Image Not Found">
               <% } %>
           </div>
+
        <% } %>
     </div>
   </body>
