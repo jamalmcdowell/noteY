@@ -5,7 +5,7 @@ const express = require('express');
 const session = require('express-session')
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
-const app = express ();
+const app = express();
 const db = mongoose.connection;
 require('dotenv').config()
 //___________________
@@ -33,6 +33,12 @@ db.on('open' , ()=>{});
 //___________________
 //Middleware
 //___________________
+
+app.use(session({
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: false
+}))
 //use public folder for static assets
 app.use(express.static('public'));
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}

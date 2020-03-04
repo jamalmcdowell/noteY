@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="/css/auth/style.css">
+  </head>
+  <body>
+      <%- include ('../partials/nav.ejs') %>
+    <div class="container">
+      <h1>New User</h1>
+      <div class="bodyWrap">
+      <form action="/users" method="POST">
+        <label for="name">User Name:</label>
+        <input type="text" name="username" required/>
+        <label for="color">Password:</label>
+        <input type="password" name="password" />
+        <br>
+        <div class="submitButton">
+
+
+        <input type="submit" value="Submit">
+                </div>
+      <form>
+        </div>
+    </div>
+  </body>
+</html>

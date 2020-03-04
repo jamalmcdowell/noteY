@@ -1,0 +1,60 @@
+h1 {
+  /* text-align: center; */
+  font-size: 2em
+
+}
+form {
+  margin-bottom: 10em;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  text-align: center;
+
+  background-color: white;
+margin: 5em 10em 15em 10em;
+padding-top: 1em;
+padding-bottom: 4em;
+}
+.bodyWrap {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+border: 1px solid black;
+margin: 4em 25em 4em 25em;
+
+}
+body {
+  background-color: black;
+    /* margin: 60em; */
+}
+label {
+  margin: 1em 0 1em 0;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+input[type=text] {
+  width:30vw ;
+
+}
+input[type=text]:focus {
+  background-color: lightblue;
+}
+input[type=password]:focus {
+  background-color: #FBC5C5;
+}
+input[type=submit] {
+  width:10vw ;
+ border: 2px solid black;
+ border-radius: 1em;
+ margin-bottom: 1em;
+ cursor: pointer;
+
+}
+input[type=submit]:hover {
+  background-color: red;
+}
+.submitButton {
+/* align-items: baseline; */
+}
