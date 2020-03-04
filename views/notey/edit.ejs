@@ -9,6 +9,8 @@
       <form action="/notey/<%=note.id%>?_method=PUT" method="POST">
         <label for="name">Name:</label>
         <input type="text" name="title" value="<%=note.title%>" />
+        <label for="image">Image:</label>
+        <input type="text" name="image" value="<%=note.image%>" />
         <textarea name="Description" rows="8" cols="80">Description</textarea>
         <br/>
         <input type="submit" value="Submit">
