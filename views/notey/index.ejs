@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <% if (currentUser) {%>
-  <%let userN = currentUser.username %>
+  <%let userN = user %>
   <% } %>
   <html lang="en" dir="ltr">
   <head>
@@ -17,7 +17,7 @@
 
         <% if (currentUser) { %>
           <% for (let noteIteration of note ) { %>
-            <% if (noteIteration.user === userN) { %>
+            <% if (noteIteration.user === currentUser.username) { %>
 
               <div class="note">
                 <li><a href="/notey/<%=noteIteration._id%>" class="noteLink">
@@ -26,7 +26,7 @@
                 <% if (noteIteration.image !== "") { %>
                   <div class="image">
                     <img src="<%= noteIteration.image %>" alt="Image Not Found">
-                  </div>                  
+                  </div>
                   <% } %>
                   <p>Created on <%= noteIteration.createdAt %>
                     <form action="/notey/<%=noteIteration._id%>?_method=DELETE" method="POST">

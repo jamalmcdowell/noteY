@@ -12,8 +12,9 @@ const isAuthenticated = (req,res,next) => {
 
 notey.get('/new', (req, res) => {
   res.render(
-    'notey/new.ejs' , {currentUser: req.session.currentUser,
-      user: req.session.currentUser.username}
+    'notey/new.ejs' , {
+
+      currentUser: req.session.currentUser}
     )
   })
 
