@@ -14,13 +14,16 @@
     <div class="container">
 
       <ul>
-
+<!-- CHECKING TO PULL UP NOTES FROM ACCOUNT -->
         <% if (currentUser) { %>
           <% for (let noteIteration of note ) { %>
             <% if (noteIteration.user === currentUser.username) { %>
 
               <div class="note">
                 <li><a href="/notey/<%=noteIteration._id%>" class="noteLink">
+                  <form action="/notey/<%=noteIteration._id%>?_method=DELETE" method="POST" >
+                    <input type="submit" value="x" class="delButton"/>
+                  </form>
                   <%= noteIteration.title %>
                 </a>
                 <% if (noteIteration.image !== "") { %>
@@ -29,21 +32,24 @@
                   </div>
                   <% } %>
                   <p>Created on <%= noteIteration.createdAt %>
-                    <form action="/notey/<%=noteIteration._id%>?_method=DELETE" method="POST">
-                      <input type="submit" value="x"/>
-                    </form>
+
                   </div>
                 </li>
                 <% } %>
                 <% } %>
                 <% } else { %>
+<!-- IF YOU ARENT LOGGED IN IT WILL OUTPUT ALL NOTES THAT DONT HAVE A USERNAME -->
                   <% for (let noteIteration of note ) { %>
                     <% if (!noteIteration.user) { %>
-                      <form action="/notey/<%=noteIteration._id%>?_method=DELETE" method="POST" class="delButton">
-                        <input type="submit" value="x"/>
-                      </form>
+
                       <div class="note">
-                        <li><a href="/notey/<%=noteIteration._id%>" class="noteLink">
+
+                        <li>
+
+                          <a href="/notey/<%=noteIteration._id%>" class="noteLink">
+                            <form action="/notey/<%=noteIteration._id%>?_method=DELETE" method="POST" >
+                              <input type="submit" value="x" class="delButton"/>
+                            </form>
                           <%= noteIteration.title %>
                         </a>
                         <% if (noteIteration.image) { %>

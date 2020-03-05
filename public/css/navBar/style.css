@@ -4,7 +4,6 @@ body {
 nav{
   display: flex;
   justify-content: space-between;
-  /* background-color: #503E58; */
   padding: 1em;
   border-bottom: 3px solid black;
 }
@@ -14,7 +13,7 @@ nav{
   border-bottom: 3px solid black;
   border-left: 1px solid black;
   text-decoration: none;
-height: auto;
+height: 1em;
   width: 10%;
   text-align: center;
   font-size: 1.3em;
@@ -23,13 +22,15 @@ height: auto;
 
 span {
   font-size: 1.5em;
-  display: inline-block;
   text-align: center;
   margin-right: 1em;
+  color: white;
+    /* background-color: white; */
 }
 .logIn{
   display: flex;
   justify-content: flex-end;
+
 }
 
 .button {
@@ -47,7 +48,7 @@ span {
   box-shadow: 0 9px #999;
 }
 
-.button:hover {background-color: #7CD3F9}
+.button:hover {background-color: #FFF77C; color: black;}
 
 .button:active {
   background-color: #7CD3F9;

@@ -40,6 +40,13 @@ ul {
 li a {
   text-decoration: underline;
   font-size: 150%;
+  display: flex;
+  flex-direction: row;
+  font-family: papyrus;
+}
+li a:hover {
+
+  text-decoration: none;
 }
 p {
   font-size: .8em;
@@ -58,6 +65,19 @@ body {
   padding-left: 1em;
 
   margin-right: 1em;
+
+}
+.delButton{
+background-color: rgb(255,255,255, 0);
+border: none;
+font-size: .8em;
+cursor: pointer;
+margin-right: .4em;
+}
+.delButton:hover{
+  transition: .8s;
+  color: red;
+  background-color: black;
 
 }
 .noteLink {

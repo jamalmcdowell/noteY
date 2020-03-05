@@ -1,5 +1,4 @@
 h1 {
-  /* text-align: center; */
   font-size: 4em
 
 }
@@ -41,22 +40,13 @@ input[type=text] {
   transition: all 0.5s;
 }
 input[type=text]:focus {
-  background-color: lightblue;
+  background-color: lightgreen;
 }
 input[type=password]:focus {
+  transition: .5s;
   background-color: #FBC5C5;
 }
-/* input[type=submit] {
-  width:10vw ;
- border: 2px solid black;
- border-radius: 1em;
- margin-bottom: 1em;
- cursor: pointer;
 
-} */
-/* input[type=submit]:hover {
-  background-color: red;
-} */
 .buttonS {
   display: inline-block;
   border-radius: 4px;
