@@ -36,7 +36,7 @@ label {
 }
 input[type=text] {
   width:30vw ;
-
+  transition: all 0.5s;
 }
 input[type=text]:focus {
   background-color: lightblue;
@@ -44,17 +44,62 @@ input[type=text]:focus {
 input[type=password]:focus {
   background-color: #FBC5C5;
 }
-input[type=submit] {
+/* input[type=submit] {
   width:10vw ;
  border: 2px solid black;
  border-radius: 1em;
  margin-bottom: 1em;
  cursor: pointer;
 
-}
-input[type=submit]:hover {
+} */
+/* input[type=submit]:hover {
   background-color: red;
+} */
+.buttonS {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: gray;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 1em;
+
 }
-.submitButton {
-/* align-items: baseline; */
+
+.buttonS span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+
+}
+
+.buttonS span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonS:hover span {
+  padding-right: 25px;
+
+}
+
+.buttonS:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.buttonS:hover {
+  background-color: green;
+}
+.buttonWrap {
+  align-items: center;
 }

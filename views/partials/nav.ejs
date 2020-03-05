@@ -3,19 +3,23 @@
   <a href="/notey/new" class="navBar">Create a New Note</a>
   <a href="/notey/" class="navBar">Home</a>
   <% if (currentUser) { %>
-<span>
-Welcome <%= currentUser.username %>
-</span>
- <ul>
-<li>
+
+<div class="logIn">
+
+  <span>
+  Welcome <%= currentUser.username %>
+  </span>
+
   <form action="/sessions?_method=DELETE" method="POST">
-    <input type="submit" value="Log Out" class="btn-small red" />
+    <input type="submit" value="Log Out" class="button" />
   </form>
-</li>
+
+</div>
+
 <% } else { %>
 <a href="/users/new" class="navBar">Sign Up</a>
 <a href="/sessions/new" class="navBar">Log In</a>
 <% } %>
 
-  </ul>
+
 </nav>

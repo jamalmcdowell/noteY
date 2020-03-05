@@ -6,19 +6,31 @@
   </head>
   <body>
       <h1>Welcome To Notey!</h1>
+      <div class="styleBar" >
+
+      </div>
     <div class="container">
+<ul>
+
 
         <% for (let noteIteration of note ) { %>
           <div class="note">
-            <a href="/notey/<%=noteIteration._id%>" class="noteLink">
+            <li><a href="/notey/<%=noteIteration._id%>" class="noteLink">
               <%= noteIteration.title %>
             </a>
               <% if (noteIteration.image !== "") { %>
+                <div class="image">
+
+
                 <img src="<%= noteIteration.image %>" alt="Image Not Found">
+
+                                </div>
+                <p>Created on <%= noteIteration.createdAt %>
               <% } %>
           </div>
 
        <% } %>
+</ul>
     </div>
   </body>
 </html>

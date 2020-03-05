@@ -14,3 +14,37 @@ nav{
   text-decoration: none;
   font-size: 1.3em;
 }
+
+span {
+  font-size: 1.5em;
+  display: inline-block;
+  text-align: center;
+  margin-right: 1em;
+}
+.logIn{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  display: inline-block;
+  padding: 5px 5px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #8FCFED;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #7CD3F9}
+
+.button:active {
+  background-color: #7CD3F9;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
