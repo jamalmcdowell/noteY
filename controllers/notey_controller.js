@@ -10,7 +10,7 @@ const isAuthenticated = (req,res,next) => {
   }
 }
 
-notey.get('/new', (req, res) => {
+notey.get('/new', isAuthenticated, (req, res) => {
   res.render(
     'notey/new.ejs' , {
 
@@ -47,7 +47,7 @@ notey.get('/new', (req, res) => {
     })
   })
 
-  notey.post('/', (req, res) => {
+  notey.post('/', isAuthenticated, (req, res) => {
     Note.create(req.body, (err, newNote) => {
       res.redirect('/notey')
 
