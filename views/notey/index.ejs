@@ -1,73 +1,62 @@
 <!DOCTYPE html>
 <% if (currentUser) {%>
-<%let userN = currentUser.username %>
-<% } %>
-<html lang="en" dir="ltr">
+  <%let userN = currentUser.username %>
+  <% } %>
+  <html lang="en" dir="ltr">
   <head>
     <%- include ('../partials/nav.ejs') %>
-        <link rel="stylesheet" href="/css/index/style.css">
+    <link rel="stylesheet" href="/css/index/style.css">
   </head>
   <body>
-      <h1>Welcome To Notey!</h1>
-      <div class="styleBar" >
-
-      </div>
-    <div class="container">
-<ul>
-
-  <% if (currentUser) { %>
-        <% for (let noteIteration of note ) { %>
-          <% if (noteIteration.user === userN) { %>
-
-          <div class="note">
-            <li><a href="/notey/<%=noteIteration._id%>" class="noteLink">
-              <%= noteIteration.title %>
-            </a>
-              <% if (noteIteration.image !== "") { %>
-                <div class="image">
-
-
-                <img src="<%= noteIteration.image %>" alt="Image Not Found">
-
-                                </div>
-
-              <% } %>
-              <p>Created on <%= noteIteration.createdAt %>
-                <form action="/notey/<%=noteIteration._id%>?_method=DELETE" method="POST">
-                  <input type="submit" value="x"/>
-                </form>
-          </div>
-        </li>
-       <% } %>
-                     <% } %>
-       <% } else { %>
-
-        <% for (let noteIteration of note ) { %>
-          <% if (!noteIteration.user) { %>
-
-          <div class="note">
-            <li><a href="/notey/<%=noteIteration._id%>" class="noteLink">
-              <%= noteIteration.title %>
-            </a>
-              <% if (noteIteration.image) { %>
-                <div class="image">
-
-
-                <img src="<%= noteIteration.image %>" alt="Image Not Found">
-
-                                </div>
-
-              <% } %>
-              <p>Created on <%= noteIteration.createdAt %>
-                <form action="/notey/<%=noteIteration._id%>?_method=DELETE" method="POST">
-                  <input type="submit" value="x"/>
-                </form>
-          </div>
-        </li>
-       <% } %>
-                     <% } %>
-                     <% } %>
-</ul>
+    <div class="styleBar" >
+      <h1 class="titleName">Welcome To Notey!</h1>
     </div>
-  </body>
-</html>
+    <div class="container">
+
+      <ul>
+
+        <% if (currentUser) { %>
+          <% for (let noteIteration of note ) { %>
+            <% if (noteIteration.user === userN) { %>
+
+              <div class="note">
+                <li><a href="/notey/<%=noteIteration._id%>" class="noteLink">
+                  <%= noteIteration.title %>
+                </a>
+                <% if (noteIteration.image !== "") { %>
+                  <div class="image">
+                    <img src="<%= noteIteration.image %>" alt="Image Not Found">
+                  </div>                  
+                  <% } %>
+                  <p>Created on <%= noteIteration.createdAt %>
+                    <form action="/notey/<%=noteIteration._id%>?_method=DELETE" method="POST">
+                      <input type="submit" value="x"/>
+                    </form>
+                  </div>
+                </li>
+                <% } %>
+                <% } %>
+                <% } else { %>
+                  <% for (let noteIteration of note ) { %>
+                    <% if (!noteIteration.user) { %>
+                      <form action="/notey/<%=noteIteration._id%>?_method=DELETE" method="POST" class="delButton">
+                        <input type="submit" value="x"/>
+                      </form>
+                      <div class="note">
+                        <li><a href="/notey/<%=noteIteration._id%>" class="noteLink">
+                          <%= noteIteration.title %>
+                        </a>
+                        <% if (noteIteration.image) { %>
+
+                          <% } %>
+                          <p>Created on <%= noteIteration.createdAt %>
+
+                          </div>
+                        </li>
+                        <% } %>
+                        <% } %>
+                        <% } %>
+                      </ul>
+                    </div>
+                  </body>
+                  </html>

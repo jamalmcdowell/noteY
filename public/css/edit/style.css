@@ -33,3 +33,6 @@ input[type=submit]:hover {
   align-items: center;
   text-align: center;
 }
+body {
+  background-color: #857F74
+}

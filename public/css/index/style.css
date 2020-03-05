@@ -1,58 +1,68 @@
 
-h1 {
-  text-align: center;
-  /* display: inline-block; */
-  align-items: center;
-}
 .styleBar {
   width: auto;
   height: 6em;
-  margin: 0 10em 0 10em;
-  background-color: #747474;
+  margin: 0 2em 0 2em;
+  background-color: black;
+  color: white;
+  text-align: right;
+
 }
+.titleName {
+  padding-top: .8em;
+  text-align: center;
+}
+
 .container {
   display: flex;
+  background-color: #F5EF95;
   flex-direction: column;
   justify-content: space-between;
-  /* mar */
-    margin: 0 10em 0 10em;
-    border: 1px solid black;
-    padding-bottom: 50em;
-    padding-top: 3em;
+  margin: 0 2em 0 2em;
+  border: 1px solid black;
+  padding-bottom: 50em;
+  padding-top: 3em;
 }
+
+
 li {
   font-size: 1.3em;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
   padding-right: 1em;
-
+  transition: all 0.5s;
 
 }
 ul {
-    list-style: georgian;
+  list-style: georgian;
+}
+li a {
+  text-decoration: underline;
+  font-size: 150%;
 }
 p {
   font-size: .8em;
 }
 body {
+  background-color: #857F74
+}
 
-  /* padding: 1em; */
-}
-input[type=submit]{
-  display: inline-block;
-}
 .note {
-
+  border-left: 1px solid black;
   border-bottom: 1px solid black;
-  margin-bottom: 2em;
+
   width: auto;
+  height: auto;
 
   padding-left: 1em;
 
   margin-right: 1em;
+
 }
 .noteLink {
-    text-decoration: none;
-      color: black;
+
+  color: black;
+  transition: all 0.5s;
+
 }

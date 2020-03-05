@@ -1,0 +1,104 @@
+body {
+background-color: #857F74
+}
+.styleBar {
+  width: auto;
+  height: 6em;
+  margin: 1em 2em 0 2em;
+  background-color: black;
+  color: white;
+  text-align: right;
+
+}
+.titleName {
+  padding-top: .8em;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  background-color: #F5EF95;
+  flex-direction: column;
+  justify-content: space-between;
+    margin: 0 2em 0 2em;
+    border: 1px solid black;
+    padding-bottom: auto;
+    padding-top: 3em;
+}
+.container h1 {
+  text-align: center;
+  border-bottom: 3px solid black;
+  margin-bottom: .5em;
+  font-size: 3em;
+}
+.noteBody {
+  padding: 0 1em 0 1em;
+  font-size: 1.6em;
+  line-height: 100px;
+  /* text-decoration: underline; */
+}
+ img{
+   border: 1px solid black;
+  width: 30%;
+  height: auto;
+
+}
+.image {
+  align-items: center;
+  text-align: center;
+}
+.buttonNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footerBtn {
+  font-size: 4em;
+}
+ input[type=submit]{
+  font-size: 7em;
+}
+.timeStamp {
+  font-size: .9em;
+  margin-right: 1em;
+  text-align: right;
+}
+
+#editBtn {
+  position: relative;
+  background-color: #161718;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.8s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+#editBtn:hover{
+  transition: 1s;
+  background-color: gray;
+
+}
+#delBtn {
+  position: relative;
+  background-color: #161718;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.8s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+#delBtn:hover{
+  transition: 1s;
+  background-color: red;
+
+}

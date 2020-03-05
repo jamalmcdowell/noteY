@@ -13,15 +13,15 @@ sessions.post('/', (req,res) => {
   User.findOne({username: req.body.username}, (err, foundUser) => {
     if (err) {
       console.log(err);
-      res.send('nah not gonna work mate')
+      res.send('unexpected error')
     } else if (!foundUser) {
-      res.send('<a href="/">NOT IN HERE MATE </a>')
+      res.send('<a href="/users/new">You Currently Dont Have A Account. Lets Fix That! </a>')
     } else {
       if (bcrypt.compareSync(req.body.password, foundUser.password)) {
         req.session.currentUser = foundUser
         res.redirect('/')
       } else {
-        res.send('<a href="/">WHATS UR PASSWORD MATE</a>')
+        res.send('<a href="/sessions/new">Incorrect Password, Try Again!</a>')
       }
     }
   })

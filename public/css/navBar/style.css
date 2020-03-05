@@ -4,15 +4,21 @@ body {
 nav{
   display: flex;
   justify-content: space-between;
-  background-color: red;
+  /* background-color: #503E58; */
   padding: 1em;
+  border-bottom: 3px solid black;
 }
 
 .navBar {
   border-right: 1px solid black;
   border-bottom: 3px solid black;
+  border-left: 1px solid black;
   text-decoration: none;
+  height: auto;
+  width: 10%;
+  text-align: center;
   font-size: 1.3em;
+  color: white;
 }
 
 span {
@@ -47,4 +53,56 @@ span {
   background-color: #7CD3F9;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+#modal {
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    overflow: auto;
+    display: none;
+}
+
+.modal-buttons {
+    background-color: #677996;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    color: white;
+    font-family: 'Arial';
+    cursor: pointer;
+}
+
+
+h2 {
+    text-align: center;
+    border-bottom: .02em solid black;
+}
+.navBar:hover {
+      background-color: black;
+}
+
+#modal-textbox{
+    background-color: white;
+    height: 350px;
+    width: 550px;
+    border-radius: 2px;
+    margin: 150px auto;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    padding: 2%;
+    line-height: 120%;
+    font-family: Arial;
+    align-items: center;
+    border: 3px solid black;
+}
+
+
+
+#modal-footer {
+    text-align: center;
+    padding-top: 3em;
 }

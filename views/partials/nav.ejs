@@ -1,4 +1,9 @@
 <link rel="stylesheet" href="/css/navBar/style.css">
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+<script src="/js/app.js" charset="utf-8"></script>
 <nav>
   <a href="/notey/" class="navBar">Home</a>
   <a href="/notey/new" class="navBar">Create a New Note</a>
@@ -18,7 +23,23 @@
 </div>
 
 <% } else { %>
+
+<div class="modalButton">
 <a href="/users/new" class="navBar">Sign Up</a>
+<button class="modal-buttons button" id="Modalopen">?</button>
+<div id="modal">
+    <div id="modal-textbox">
+        <h2>Why Should I Sign Up?</h2>
+        <p>Join noteY to save your notes to your profile to view later!
+        </p>
+        <div id="modal-footer">
+            <a class="modal-buttons" id="close" href="#">Close</a>
+        </div>
+    </div>
+</div>
+
+<!-- <button type="button" class="button">?</button> -->
+</div>
 <a href="/sessions/new" class="navBar">Log In</a>
 <% } %>
 
