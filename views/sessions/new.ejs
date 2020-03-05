@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <%- include ('../partials/nav.ejs') %>
-  <link rel="stylesheet" href="/css/edit/style.css">
-
+  <link rel="stylesheet" href="/css/auth/style.css">
 </head>
 <body>
+  <%- include ('../partials/nav.ejs') %>
   <div class="container">
-    <h1>notey New Page</h1>
+    <h1>Log In</h1>
+    <div class="bodyWrap">
+      <form action="/sessions" method="POST">
+        <label for="username">User Name:</label>
+        <input type="text" name="username" required/>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required/>
+        <br>
+        <div class="buttonWrap">
 
-    <form action="/notey/<%=note.id%>?_method=PUT" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" name="title" value="<%=note.title%>" />
-      <label for="image">Image:</label>
-      <input type="text" name="image" value="<%=note.image%>" />
-      <textarea name="Description" rows="8" cols="80">Description</textarea>
-      <br/>
-      <div class="submitButton">
+          <button type="submit" class="buttonS"><span>Log In</span></button>
 
-        <input type="submit" value="submit">
+        </div>
       </div>
-    </form>
-    <button type="button" name="button">
-      <a href="/notey">Back</a>
-    </button>
-  </div>
-</body>
-</html>
+      <form>
+      </div>
+
+    </body>
+    </html>
