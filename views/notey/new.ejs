@@ -23,8 +23,8 @@
         <br/>
                 </div>
         <div class="submitButton">
-
-        <input type="submit" value="Create A Account" class="buttonS" />
+          <input type="text" name="user" value="<% if (currentUser){%><%= user %><%}%>" class="hidden" readonly/> 
+        <input type="submit" value="Create Entry" class="buttonS" />
       </div>
       </form>
       <button type="button" name="button">

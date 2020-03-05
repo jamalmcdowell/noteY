@@ -26,7 +26,11 @@ li {
   justify-content: space-between;
   flex-wrap: nowrap;
   padding-right: 1em;
-  list-style: georgian;
+
+
+}
+ul {
+    list-style: georgian;
 }
 p {
   font-size: .8em;
@@ -35,7 +39,11 @@ body {
 
   /* padding: 1em; */
 }
+input[type=submit]{
+  display: inline-block;
+}
 .note {
+
   border-bottom: 1px solid black;
   margin-bottom: 2em;
   width: auto;
@@ -46,4 +54,5 @@ body {
 }
 .noteLink {
     text-decoration: none;
+      color: black;
 }

@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<% if (currentUser) {%>
+<%let userN = currentUser.username %>
+<% } %>
 <html lang="en" dir="ltr">
   <head>
     <%- include ('../partials/nav.ejs') %>
@@ -12,8 +15,10 @@
     <div class="container">
 <ul>
 
-
+  <% if (currentUser) { %>
         <% for (let noteIteration of note ) { %>
+          <% if (noteIteration.user === userN) { %>
+
           <div class="note">
             <li><a href="/notey/<%=noteIteration._id%>" class="noteLink">
               <%= noteIteration.title %>
@@ -25,11 +30,43 @@
                 <img src="<%= noteIteration.image %>" alt="Image Not Found">
 
                                 </div>
-                <p>Created on <%= noteIteration.createdAt %>
-              <% } %>
-          </div>
 
+              <% } %>
+              <p>Created on <%= noteIteration.createdAt %>
+                <form action="/notey/<%=noteIteration._id%>?_method=DELETE" method="POST">
+                  <input type="submit" value="x"/>
+                </form>
+          </div>
+        </li>
        <% } %>
+                     <% } %>
+       <% } else { %>
+
+        <% for (let noteIteration of note ) { %>
+          <% if (!noteIteration.user) { %>
+
+          <div class="note">
+            <li><a href="/notey/<%=noteIteration._id%>" class="noteLink">
+              <%= noteIteration.title %>
+            </a>
+              <% if (noteIteration.image) { %>
+                <div class="image">
+
+
+                <img src="<%= noteIteration.image %>" alt="Image Not Found">
+
+                                </div>
+
+              <% } %>
+              <p>Created on <%= noteIteration.createdAt %>
+                <form action="/notey/<%=noteIteration._id%>?_method=DELETE" method="POST">
+                  <input type="submit" value="x"/>
+                </form>
+          </div>
+        </li>
+       <% } %>
+                     <% } %>
+                     <% } %>
 </ul>
     </div>
   </body>
