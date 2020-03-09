@@ -3,9 +3,8 @@
 <head>
   <%- include ('../partials/nav.ejs') %>
   <link rel="stylesheet" href="/css/show/style.css">
-<% let noteArray = [] %>
-<% let notebody = note.body.split("/") %>
-<% noteArray = notebody %>
+<% let notesplitter = note.body.split("/") %>
+
 
 </head>
 <body>
@@ -22,12 +21,14 @@
         </div>
         <%}%>
 
-<% for (var word of noteArray) { %>
+<% for (var word of notesplitter) { %>
           <p class="noteBody">
             <%= word %>
           </p>
         <% } %>
-        <p class="timeStamp">Created on <%= note.createdAt %></p>
+
+        <p class="timeStamp">Created on <%= note.createdAt  %></p>
+          <p class="timeStamp">Updated on <%=note.updatedAt%></p>
       </div>
 
       <br>
