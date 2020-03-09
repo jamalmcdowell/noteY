@@ -37,6 +37,7 @@ background-color: #857F74
   padding: 0 1em 0 1em;
   font-size: 1.6em;
   line-height: 100px;
+  border-bottom: 2px solid black;
     font-family: papyrus;
   /* text-decoration: underline; */
 }

@@ -3,6 +3,9 @@
 <head>
   <%- include ('../partials/nav.ejs') %>
   <link rel="stylesheet" href="/css/show/style.css">
+<% let noteArray = [] %>
+<% let notebody = note.body.split("/") %>
+<% noteArray = notebody %>
 
 </head>
 <body>
@@ -18,8 +21,12 @@
           <img src="<%= note.image %>" alt="Image Not Found">
         </div>
         <%}%>
-        <p class="noteBody"><%= note.body %></p>
 
+<% for (var word of noteArray) { %>
+          <p class="noteBody">
+            <%= word %>
+          </p>
+        <% } %>
         <p class="timeStamp">Created on <%= note.createdAt %></p>
       </div>
 
