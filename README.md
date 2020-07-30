@@ -8,11 +8,17 @@ This app is designed to allow you to create a account to store notes that are sp
 
 ### Technologies Used:
 Jquery to generate the model that tells you why you should make a account.
+
 HTML for env files to auto generate the content displayed.
+
 Java ENV to run java inside .env files.
+
 express to link everything together.
-Node.js to create and link server to MVC/Public CSS views
-env for encryption
+
+Node.js to both create and link server to MVC/Public CSS views
+
+env for encrypted passwords
+
 CSS for background, button, text, and login formatting.
 
 ### Approach Taken:
