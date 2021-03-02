@@ -120,6 +120,11 @@ _                _        ____             _
           title: 'Skating',
           body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           image: 'https://scene7.zumiez.com/is/image/zumiez/pdp_hero/Santa-Cruz-Sunset-Dot-39%22-Longboard-Complete-_323474-front-US.jpg'
+        },
+        {
+          title: 'woah!',
+          body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          image: 'https://scene7.zumiez.com/is/image/zumiez/pdp_hero/Santa-Cruz-Sunset-Dot-39%22-Longboard-Complete-_323474-front-US.jpg'
         }
 
       ],
